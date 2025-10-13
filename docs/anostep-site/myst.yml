@@ -1,0 +1,36 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 07ba6502-843a-4b1a-9205-4c9504b2eea5
+  title: "AnoSTEP"
+  subtitle: "Close-kin mark-recapture study of Anopheles mosquitoes in Lake Kanyaboli, Kenya"
+  github: https://github.com/sanjaynagi/anokin 
+  description: >
+    AnoKin is a close-kin mark-recapture (CKMR) study investigating population dynamics 
+    and structure of Anopheles mosquitoes in Lake Kanyaboli, Kenya through genetic analysis 
+    of kinship between individual mosquitoes.
+  keywords: ["malaria", "mosquitoes", "population genetics", "CKMR", "Kenya"]
+
+  toc:
+    - file: index.md
+    - file: notebooks/ckmr.md
+    - title: Results
+      children:
+        - file: notebooks/Anostep_dashboard.ipynb
+        # - file: notebooks/morphological-id.md
+        # - file: notebooks/interactive_commcare_gp_map.html
+        # - file: notebooks/google-earth.md
+    # - title: Results
+    #   children:
+    #     - file: notebooks/morpho-id-auto.ipynb
+
+site:
+  title: "AnoSTEP- *Anopheles stephensi* sampling in 56 sites across Kenya"
+  template: book-theme
+  options:
+    favicon: images/favicon.ico
+    logo: images/logo.jpg
+    hide_toc: false
+    hide_footer_links: false
+    hide_outline: true
+    outline_maxdepth: 2
