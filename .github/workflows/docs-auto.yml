@@ -1,4 +1,4 @@
-name: ODK data, Run analysis, and Deploy
+name: CommCare data, Run analysis, and Deploy
 on:
   # Keep the push trigger for manual updates
   push:
