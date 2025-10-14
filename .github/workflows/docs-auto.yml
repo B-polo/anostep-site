@@ -47,11 +47,11 @@ jobs:
           python -m ipykernel install --user --name python3
       
       # Pull data from ODK
-#      - name: Pull data from ODK
-#        run: python .github/pull_odk_data.py
-#        env:
-#          ODK_EMAIL: ${{ secrets.ODK_EMAIL }}
-#          ODK_PASSWORD: ${{ secrets.ODK_PASSWORD }}
+      - name: Pull data from ODK
+        run: python .github/pull_commcare_data.py
+        env:
+          ODK_EMAIL: ${{ secrets.ODK_EMAIL }}
+          ODK_PASSWORD: ${{ secrets.ODK_PASSWORD }}
       
 #      # Execute the notebook with papermill
 #      - name: Execute notebook with papermill
