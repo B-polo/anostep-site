@@ -1,0 +1,49 @@
+2025-09-18 21:50:04,261 - INFO - Starting CommCare data scheduler...
+2025-09-18 21:50:04,264 - INFO - Daily sync scheduled for 9:00 AM
+2025-09-18 21:51:10,394 - INFO - Starting CommCare data scheduler...
+2025-09-18 21:51:10,395 - INFO - Daily sync scheduled for 9:00 AM
+2025-09-18 21:51:10,395 - INFO - Press Ctrl+C to stop
+2025-09-19 09:00:59,148 - INFO - ============================================================
+2025-09-19 09:00:59,153 - INFO - DAILY COMMCARE DATA SYNC STARTED
+2025-09-19 09:00:59,155 - INFO - ============================================================
+2025-09-19 09:01:02,278 - INFO - Connection test successful
+2025-09-19 09:01:02,279 - INFO - Starting automatic data fetch - max 10000 records
+2025-09-19 09:01:02,280 - INFO - Fetching batch: records 0 to 100
+2025-09-19 09:01:05,965 - INFO - Batch complete. Total records: 865
+2025-09-19 09:01:05,966 - INFO - Fetching batch: records 100 to 200
+2025-09-19 09:01:08,918 - INFO - Batch complete. Total records: 1730
+2025-09-19 09:01:08,919 - INFO - Fetching batch: records 200 to 300
+2025-09-19 09:01:11,928 - INFO - Batch complete. Total records: 2595
+2025-09-19 09:01:11,928 - INFO - Fetching batch: records 300 to 400
+2025-09-19 09:01:14,774 - INFO - Batch complete. Total records: 3460
+2025-09-19 09:01:14,775 - INFO - Fetching batch: records 400 to 500
+2025-09-19 09:01:18,732 - INFO - Batch complete. Total records: 4325
+2025-09-19 09:01:18,733 - INFO - Fetching batch: records 500 to 600
+2025-09-19 09:01:21,576 - INFO - Batch complete. Total records: 5190
+2025-09-19 09:01:21,576 - INFO - Fetching batch: records 600 to 700
+2025-09-19 09:01:25,310 - INFO - Batch complete. Total records: 6055
+2025-09-19 09:01:25,311 - INFO - Fetching batch: records 700 to 800
+2025-09-19 09:01:28,991 - INFO - Batch complete. Total records: 6920
+2025-09-19 09:01:28,992 - INFO - Fetching batch: records 800 to 900
+2025-09-19 09:01:32,565 - INFO - Batch complete. Total records: 7785
+2025-09-19 09:01:32,567 - INFO - Fetching batch: records 900 to 1000
+2025-09-19 09:01:35,490 - INFO - Batch complete. Total records: 8650
+2025-09-19 09:01:35,491 - INFO - Fetching batch: records 1000 to 1100
+2025-09-19 09:01:38,324 - INFO - Batch complete. Total records: 9515
+2025-09-19 09:01:38,325 - INFO - Fetching batch: records 1100 to 1200
+2025-09-19 09:01:41,277 - INFO - Batch complete. Total records: 10380
+2025-09-19 09:01:41,339 - INFO - Successfully fetched 10380 records with 59 columns
+2025-09-19 09:01:41,339 - INFO - Cleaning column names...
+2025-09-19 09:01:41,345 - INFO - Saving data...
+2025-09-19 09:01:41,505 - INFO - Daily data saved to 'commcare_data_20250919_090141.csv'
+2025-09-19 09:01:41,655 - INFO - Current data updated: 'commcare_cleaned_data.csv'
+2025-09-19 09:01:41,685 - INFO - Metadata saved to 'commcare_metadata_20250919_090141.json'
+2025-09-19 09:01:41,685 - INFO - ============================================================
+2025-09-19 09:01:41,685 - INFO - DAILY SYNC COMPLETED SUCCESSFULLY
+2025-09-19 09:01:41,686 - INFO - Records processed: 10380
+2025-09-19 09:01:41,686 - INFO - Files updated:
+2025-09-19 09:01:41,686 - INFO -   • commcare_data_20250919_090141.csv
+2025-09-19 09:01:41,687 - INFO -   • commcare_cleaned_data.csv
+2025-09-19 09:01:41,687 - INFO -   • commcare_column_mapping_20250919_090141.csv
+2025-09-19 09:01:41,687 - INFO -   • commcare_metadata_20250919_090141.json
+2025-09-19 09:01:41,688 - INFO - ============================================================

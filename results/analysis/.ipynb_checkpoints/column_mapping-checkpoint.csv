@@ -1,0 +1,60 @@
+Original_Column,Cleaned_Column
+completed_time,completed_time
+form additional_comments,additional_comments
+form algae_quantity,algae_quantity
+form anoph_present,anoph_present
+form barcode_recording falcon_barcode,barcode_recording_falcon_barcode
+form barcode_recording scan_barcode,barcode_recording_scan_barcode
+form case case_id,case_case_id
+form collection_date,collection_date
+form county,county
+form culicine_present,culicine_present
+form distance_from_site,distance_from_site
+form distance_to_nearest_animal_shelter,distance_to_nearest_animal_shelter
+form distance_to_nearest_hse,distance_to_nearest_hse
+form drainage_source | car_wash,drainage_source_car_wash
+form drainage_source | extra,drainage_source_extra
+form drainage_source | hotel_food_kiosk,drainage_source_hotel_food_kiosk
+form drainage_source | market_place,drainage_source_market_place
+form drainage_source | other,drainage_source_other
+form drainage_source | public_toilets,drainage_source_public_toilets
+form drainage_source | residential_outlets,drainage_source_residential_outlets
+form drainage_source | salon_barber_shop,drainage_source_salon_barber_shop
+form drainage_source | unknown,drainage_source_unknown
+form drainage_source | water_point,drainage_source_water_point
+form geographical_information village_name,geographical_information_village_name
+form gps_coordinates: accuracy (meters),gps_coordinates_accuracy_(meters)
+form gps_coordinates: altitude (meters),gps_coordinates_altitude_(meters)
+form gps_coordinates: latitude (degrees),gps_coordinates_latitude_(degrees)
+form gps_coordinates: longitude (degrees),gps_coordinates_longitude_(degrees)
+form habitat_nature,habitat_nature
+form habitat_size,habitat_size
+form interviewer,interviewer
+form other_breeding_site,other_breeding_site
+form other_drainage_channel_source,other_drainage_channel_source
+form predators_present,predators_present
+form season,season
+form shade,shade
+form site_code,site_code
+form site_gps,site_gps
+form site_lat,site_lat
+form site_loc,site_loc
+form site_long,site_long
+form site_photo,site_photo
+form subcase_0 case case_id,subcase_0_case_case_id
+form subcounty,subcounty
+form sublocation,sublocation
+form transect,transect
+form type_of_breeding_site,type_of_breeding_site
+form type_of_water,type_of_water
+form vegetation_present,vegetation_present
+form water_appearance,water_appearance
+form water_depth,water_depth
+form water_source,water_source
+form_link,form_link
+formid,formid
+hq_user,hq_user
+number,number
+received_on,received_on
+started_time,started_time
+username,username
