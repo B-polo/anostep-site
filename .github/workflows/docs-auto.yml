@@ -50,8 +50,8 @@ jobs:
       - name: Pull data from ODK
         run: python .github/pull_commcare_data.py
         env:
-          ODK_EMAIL: ${{ secrets.ODK_EMAIL }}
-          ODK_PASSWORD: ${{ secrets.ODK_PASSWORD }}
+          ODK_EMAIL: ${{ secrets.COMMCARE_EMAIL }}
+          ODK_PASSWORD: ${{ secrets.COMMCARE_PASSWORD }}
       
 #      # Execute the notebook with papermill
 #      - name: Execute notebook with papermill
