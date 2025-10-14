@@ -46,8 +46,8 @@ jobs:
           pip install papermill plotly pandas requests ipykernel
           python -m ipykernel install --user --name python3
       
-      # # Pull data from ODK
-      # - name: Pull data from ODK
+      # # Pull data from CommCare
+      # - name: Pull data from CommCare
       #   run: python .github/pull_commcare_data.py
       #   env:
       #     COMMCARE_EMAIL: ${{ secrets.COMMCARE_EMAIL }}
