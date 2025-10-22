@@ -12,10 +12,6 @@ OUTPUT_DIR = "data"
 email = os.environ.get('COMMCARE_EMAIL')
 password = os.environ.get('COMMCARE_PASSWORD')
 
-# # credentials
-# email = "otienobrn09@gmail.com"
-# password = "Tracy@2013"
-
 if not email or not password:
     print("❌ Error: Set COMMCARE_EMAIL and COMMCARE_PASSWORD environment variables")
     print("Example: export COMMCARE_EMAIL='your_email@example.com'")
