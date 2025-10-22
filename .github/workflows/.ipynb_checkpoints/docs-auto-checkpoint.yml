@@ -33,31 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-# # Set up Python for CommCare data processing
-#     - name: Set up Python
-#         uses: actions/setup-python@v4
-#         with:
-#           python-version: '3.9'
-      
-#       - name: Install Python dependencies
-#         run: |
-#           python -m pip install --upgrade pip
-#           pip install pandas requests
-      
-#       - name: Pull data from Commcare
-#         run: python pull_commcare_data.py
-#         env:
-#           COMMCARE_EMAIL: ${{ secrets.COMMCARE_EMAIL }}
-#           COMMCARE_PASSWORD: ${{ secrets.COMMCARE_PASSWORD }}
-      
-#       - name: Commit downloaded data
-#         run: |
-#           git config --local user.email "action@github.com"
-#           git config --local user.name "GitHub Action"
-#           git add data/
-#           git commit -m "Auto-update CommCare data" || echo "No changes"
-#           git push
           
       # Set up Python for CommCare data processing
       - name: Set up Python
@@ -70,14 +45,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install papermill plotly pandas requests ipykernel
           python -m ipykernel install --user --name python3
-
-      - name: Commit downloaded data
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add data/
-          git commit -m "Auto-update CommCare data" || echo "No changes"
-          git push
       
       # Pull data from Commcare
       - name: Pull data from Commcare
