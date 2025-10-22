@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
           
       # Set up Python for CommCare data processing
       - name: Set up Python
@@ -48,7 +49,7 @@ jobs:
       
       # Pull data from Commcare
       - name: Pull data from Commcare
-        run: python .github/pull_commcare_data.py
+        run: python pull_commcare_data.py
         env:
           COMMCARE_EMAIL: ${{ secrets.COMMCARE_EMAIL }}
           COMMCARE_PASSWORD: ${{ secrets.COMMCARE_PASSWORD }}
