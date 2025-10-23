@@ -1,26 +1,20 @@
 name: CommCare data, Run analysis, and Deploy
 on:
-  # Keep the push trigger for manual updates
   push:
     branches: [main]
-  # Add scheduled runs at 11am and 12pm UTC daily
   schedule:
     - cron: '0 8 * * *'   # 11am EAT (8am UTC)
     - cron: '0 9 * * *'   # 12pm EAT (9am UTC)
-    # Allow manual triggering
   workflow_dispatch:
 
 env:
-  # `BASE_URL` determines the website is served from, including CSS & JS assets
   BASE_URL: /${{ github.event.repository.name }}
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: write        # CHANGED: Allow writing to repo
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
   group: 'pages'
   cancel-in-progress: false
@@ -33,36 +27,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-          
-      # Set up Python for CommCare data processing
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-          
+      
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pandas requests
-          pip install papermill plotly pandas requests ipykernel
-          python -m ipykernel install --user --name python3
       
-      # Pull data from Commcare
       - name: Pull data from Commcare
-        run: python .github/pull_commcare_data.py
+        run: |
+          echo "Starting CommCare data pull..."
+          python .github/pull_commcare_data.py
+          echo "CommCare data pull completed"
         env:
           COMMCARE_EMAIL: ${{ secrets.COMMCARE_EMAIL }}
           COMMCARE_PASSWORD: ${{ secrets.COMMCARE_PASSWORD }}
       
-#      # Execute the notebook with papermill
-#      - name: Execute notebook with papermill
-#        run: |
-#          # Adjust the path to your notebook
-#          papermill sampling/odk/morpho-id-auto.ipynb docs/anokin-site/notebooks/morpho-id-auto.ipynb
+      - name: Check if data files exist
+        run: |
+          echo "Checking for data files..."
+          ls -la data/ || echo "Data directory not found"
+          find . -name "commcare*.csv" || echo "No CSV files found"
       
-      # Setup Node.js for MyST
-      - uses: actions/setup-node@v4
+      - name: Commit and push downloaded data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/
+          git commit -m "Auto-update CommCare data $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push
+      
+      - name: Set up Node.js for MyST
+        uses: actions/setup-node@v4
         with:
           node-version: 18.x
       
